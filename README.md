@@ -1,2 +1,2 @@
-# imitation-learning
-Imitation learning using Reinforcement Learning
+# ILRL
+Imitation Learning via Reinforcement Learning
