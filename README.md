@@ -1,12 +1,17 @@
 # Imitation Learning via Reinforcecment Learning (ILRL)
 
-This project uses policy gradient methods like PPO to imitate an expert policy. *Given an Expert Policy as input the GAIL algorithm uses Policy Gradient method like PPO (in this case) to learn the policy and in most cases the learned policy gets better than the Expert Policy.*
+This project uses policy gradient methods such as PPO or TRPO along with Generative Adversarial Networks to achieve Imitation Learning on discrete gym environments.
 
-*This project uses **Generative Adversarial Imitation Learning** [[paper]](https://arxiv.org/pdf/1606.03476.pdf)*
+*Methodology used here is explained in **Generative Adversarial Imitation Learning (GAIL)** [[paper]](https://arxiv.org/pdf/1606.03476.pdf)*
+
+### Gist of it:
+
+**Given an Expert Policy as input the GAIL algorithm uses Policy Gradient method like PPO (in this case) to achieve Imitation Learning and in most cases the learned policy gets better than the input Expert Policy.**
+
 
 **For more information why we choose this methodology over other algorithms read the report:** [GAIL to solve Discrete environments](https://github.com/prasadchelsea33/imitation-learning/blob/master/Report/PPO(Prasad%20Madhale).pdf)
 
-### Steps:
+## Overview:
 1. **Run PPO algorithm** - run the PPO algorithm on an environment
     1. *Create Actor-Critic* architecture which represents the two policy networks
     2. *Code the PPO algorithm*
@@ -28,18 +33,29 @@ This project uses policy gradient methods like PPO to imitate an expert policy. 
     
 **Note** - We can also use other Policy gradient methods like TRPO to generate expert policy as well as the utility algorithm in GAIL for Imitation Learning
 
-### Results on CartPole-v0 environment:
+## Dependencies:
+1. Tensorflow (faster if you have GPU support enabled)
+2. OpenAI gym
+3. numpy
 
-#### Our PPO implementation Rewards
+## Instructions to run:
+1. Run Jupyter notebook or Jupyter lab
+2. Open GAIL.ipynb file
+3. Follow the instructions in the notebook to run the project
+4. Follow the instructions in the notebook to generate and observe the plots on *Tensorboard*
+
+## Results on CartPole-v0 environment:
+
+### Our PPO implementation Rewards
 ![Our PPO implementation Rewards](/plots/my_ppo.png)
 
-#### GAIL learned agent Rewards
+### GAIL learned agent Rewards
 ![GAIL rewards](/plots/gail_rewards.png)
 
-#### Baseline PPO rewards
+### Baseline PPO rewards
 ![Baselines PPO rewards](/plots/baseline_ppo.png)
 
-### References:
+## References:
 1. Generative Adversarial Imitation Learning [[paper]](https://arxiv.org/pdf/1606.03476.pdf)
 2. [OpenAI baselines GAIL](https://github.com/openai/baselines/tree/master/baselines/gail)
 3. [Tensorflow implementation of Generative Adversarial Imitation Learning(GAIL) with discrete action](https://github.com/uidilr/gail_ppo_tf)
