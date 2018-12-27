@@ -40,7 +40,7 @@ This project uses policy gradient methods such as PPO or TRPO along with Generat
 
 ## Instructions to run:
 1. Run Jupyter notebook or Jupyter lab
-2. Open GAIL.ipynb file
+2. Open [GAIL.ipynb](https://github.com/prasadchelsea33/imitation-learning/blob/master/GAIL.ipynb) file
 3. Follow the instructions in the notebook to run the project
 4. Follow the instructions in the notebook to generate and observe the plots on *Tensorboard*
 
