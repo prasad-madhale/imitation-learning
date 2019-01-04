@@ -47,13 +47,16 @@ This project uses policy gradient methods such as PPO or TRPO along with Generat
 ## Results on CartPole-v0 environment:
 
 ### Our PPO implementation Rewards
-![Our PPO implementation Rewards](/plots/my_ppo.png)
+![Our PPO implementation Rewards](./plots/my_ppo.png)
 
 ### GAIL learned agent Rewards
-![GAIL rewards](/plots/gail_rewards.png)
+![GAIL rewards](./plots/gail_rewards.png)
 
 ### Baseline PPO rewards
-![Baselines PPO rewards](/plots/baseline_ppo.png)
+![Baselines PPO rewards](./plots/baseline_ppo.png)
+
+## Baselines TRPO Rewards
+![Baselines TRPO rewards](./plots/baseline_trpo.png)
 
 ## References:
 1. Generative Adversarial Imitation Learning [[paper]](https://arxiv.org/pdf/1606.03476.pdf)
