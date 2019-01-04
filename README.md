@@ -1,4 +1,4 @@
-# Imitation Learning via Reinforcecment Learning (ILRL)
+# Imitation Learning via Reinforcement Learning (ILRL)
 
 This project uses policy gradient methods such as PPO or TRPO along with Generative Adversarial Networks to achieve Imitation Learning on discrete gym environments.
 
@@ -11,12 +11,12 @@ This project uses policy gradient methods such as PPO or TRPO along with Generat
 
 **For more information why we choose this methodology over other algorithms read the report:** [GAIL to solve Discrete environments](https://github.com/prasadchelsea33/imitation-learning/blob/master/Report/PPO(Prasad%20Madhale).pdf)
 
-## Overview:
+## Overview of steps:
 1. **Run PPO algorithm** - run the PPO algorithm on an environment
     1. *Create Actor-Critic* architecture which represents the two policy networks
     2. *Code the PPO algorithm*
     3. *Train an agent using the PPO algorithm*
-2. **Sample trajectories** - Sample some trajectories which represents the Expert Policy which we later use to train our agent which uses Imitation learning
+2. **Sample trajectories** - Sample some trajectories which represents the Expert Policy which we later use to train our agent for Imitation learning
     1. *Restore the agent policy network weights*
     2. *Sample some state and action using the expert policy*
     3. *Save the sampled states and actions into csv files*
@@ -26,12 +26,12 @@ This project uses policy gradient methods such as PPO or TRPO along with Generat
     2. *Train the agent* to learn by imitating the given expert policy (uses GAIL algorithm)
 5. **Run Baseline implementations of PPO and TRPO to compare performance with our implementations**
 6. **Observe reward plots on Tensorboard** - the tensorboard contains the following plots :-
-    1. Our PPO implementation Reward and Lengths
+    1. Our PPO implementation's Rewards and Lengths
     2. Expert Policy Testing plot
-    3. GAIL reward and lengths plot
-    4. Baseline reward, length and loss plots
+    3. GAIL reward and lengths plot (final agent)
+    4. Baseline reward, length and loss plots for comparison
     
-**Note** - We can also use other Policy gradient methods like TRPO to generate expert policy as well as the utility algorithm in GAIL for Imitation Learning
+**Note** - We can use any algorithm to obtain expert policy for GAIL agent training. Also, we can use other policy gradient methods like TRPO in place of PPO in the GAIL algorithm to obtain our imitating agent. However, the performance may vary depending on the algorithm choosen.
 
 ## Dependencies:
 1. Tensorflow (faster if you have GPU support enabled)
